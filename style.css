@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  background: #181820;
+  margin: 0px;
+  padding: 0px;
+  color: #fff;
+  font-family: roboto;
+  font-weight: bold;
+}
+.first {
+  height: 100vh;
+  /* background-image: url(img/220311_Lisboeta0739_039_+R2_Lights_HiRes.jpg);
+    background: rgba(30, 30, 30, 0.5); */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("img/220311_Lisboeta0739_039_+R2_Lights_HiRes.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav {
+  height: 10%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10%;
+  font-size: 1.5em;
+}
+.logo {
+  font-size: 2em;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+li {
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+li:hover {
+  transform: scale(1.4);
+  border-bottom: 2px solid #fff;
+}
+.title {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  flex-direction: column;
+}
+.container {
+  background-color: rgb(10, 10, 10, 0.7);
+  height: 80%;
+  width: 60%;
+  border-radius: 10px;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-gap: 50px;
+  padding: 50px;
+}
+.p1 {
+  margin: 0px;
+  margin-bottom: 5px;
+}
+.item1,
+.item2,
+.item3,
+.item4 {
+  /* background: #558885; */
+  /* background: #000; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.itemImg1,
+.itemImg2,
+.itemImg3,
+.itemImg4 {
+  width: 50%;
+  height: 80%;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px #000;
+  min-width: 100px;
+  min-height: 100px;
+}
+.itemImg1 {
+  background-image: url(img/pierogi.jpg);
+}
+.itemImg2 {
+  background-image: url(img/bigos.jpg);
+}
+.itemImg3 {
+  background-image: url(img/zurek.jpeg);
+}
+.itemImg4 {
+  background-image: url(img/lazanki.jpg);
+}
+.map {
+  background-image: url(img/screenshot-2023-02-13_20:03:50.png);
+  background-repeat: no-repeat;
+}
+.container2 {
+  background-color: rgb(10, 10, 10, 0.7);
+  height: 80%;
+  width: 60%;
+  border-radius: 10px;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  padding: 50px;
+  font-size: 0.8em;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-template: 1fr 1fr 1fr 1fr / 1fr;
+  }
+  .container2 {
+    grid-template: 1fr 1fr 1fr / 1fr;
+  }
+}
