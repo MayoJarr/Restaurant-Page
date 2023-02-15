@@ -2,6 +2,12 @@ import { createDiv } from "./initPage";
 function createMenu() {
   const st = document.querySelector(".title");
   st.remove();
+  const li1 = document.querySelector('.li1');
+  const li2 = document.querySelector('.li2');
+  const li3 = document.querySelector('.li3');
+  li2.style.cssText = 'border-bottom: 2px solid #fff';
+  li1.style.cssText = 'border-bottom: none'
+  li3.style.cssText = 'border-bottom: none'
   createDiv("title", "title", ".first", "", "div");
   createDiv("p1", "p1", ".title", "Our Menu:", "P");
   createDiv("container", "container", ".title", "", "div");

@@ -22,13 +22,31 @@ function initPage() {
   createDiv("li3", "li3", "ol", "Contact", "LI");
   createDiv("title", "title", ".first", "", "div");
   createDiv("p1", "", ".title", "Welcome in our pleasent restaurant!", "P");
-
+  createDiv("outer", "outer", "nav", "", "div")
+  createDiv("menu", "menu", ".outer", "///", "div");
+  createDiv("closeMenu", "closeMenu", ".list", "X", "div");
   const li1 = document.querySelector(".li1");
   const li2 = document.querySelector(".li2");
   const li3 = document.querySelector(".li3");
+  const menu = document.querySelector(".menu");
+  const list = document.querySelector(".list");
+  const closeMenu = document.querySelector(".closeMenu");
+  const showMenu = () => (list.style.cssText = "right: 0px");
+  const hideMenu = () => (list.style.cssText = "right: -200px");
 
-  li1.addEventListener("click", () => createHome());
-  li2.addEventListener("click", () => createMenu());
-  li3.addEventListener("click", () => createContact());
+  li1.addEventListener("click", () => {
+    createHome();
+    hideMenu();
+  });
+  li2.addEventListener("click", () => {
+    createMenu();
+    hideMenu();
+  });
+  li3.addEventListener("click", () => {
+    createContact();
+    hideMenu();
+  });
+  menu.addEventListener("click", () => showMenu());
+  closeMenu.addEventListener("click", () => hideMenu());
 }
 export { initPage, createDiv };
