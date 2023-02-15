@@ -6,11 +6,10 @@ body {
   color: #fff;
   font-family: roboto;
   font-weight: bold;
+  overflow-x: hidden;
 }
 .first {
-  height: 100vh;
-  /* background-image: url(img/220311_Lisboeta0739_039_+R2_Lights_HiRes.jpg);
-    background: rgba(30, 30, 30, 0.5); */
+  min-height: 100vh;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.8),
@@ -23,12 +22,12 @@ body {
   align-items: center;
 }
 nav {
-  height: 10%;
+  min-height: 10vh;
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 10%;
+  /* padding: 0px 10%; */
   font-size: 1.5em;
 }
 .logo {
@@ -44,10 +43,13 @@ li {
 }
 li:hover {
   transform: scale(1.4);
-  border-bottom: 2px solid #fff;
+  /* border-bottom: 2px solid #fff; */
+}
+li:active{
+  color: #bbb;
 }
 .title {
-  height: 90%;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -106,7 +108,8 @@ li:hover {
 }
 .map {
   background-image: url(img/screenshot-2023-02-13_20:03:50.png);
-  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
 }
 .container2 {
   background-color: rgb(10, 10, 10, 0.7);
@@ -118,11 +121,56 @@ li:hover {
   padding: 50px;
   font-size: 0.8em;
 }
+.menu {
+  display: none;
+  z-index: 2;
+}
+.closeMenu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 10px;
+  display: none;
+}
+.outer {
+  overflow: hidden;
+  position: relative;
+}
 @media screen and (max-width: 1000px) {
   .container {
     grid-template: 1fr 1fr 1fr 1fr / 1fr;
   }
   .container2 {
     grid-template: 1fr 1fr 1fr / 1fr;
+  }
+  /* .list {
+    display: none;
+  } */
+  .menu {
+    display: block;
+  }
+  li {
+    display: block;
+    padding-left: 0px;
+  }
+  .list {
+    background: black;
+    position: absolute;
+    top: 0px;
+    right: -200px;
+    height: 100vh;
+    width: 200px;
+    z-index: 5;
+    transition: 1s;
+    overflow: hidden;
+  }
+  .title {
+    margin-top: 50px;
+  }
+  .closeMenu {
+    display: block
+  }
+  body {
+    font-size: 10px;
   }
 }
