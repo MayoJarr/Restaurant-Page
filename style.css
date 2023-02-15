@@ -132,10 +132,10 @@ li:active{
   margin: 10px;
   display: none;
 }
-.outer {
+/* .outer {
   overflow: hidden;
   position: relative;
-}
+} */
 @media screen and (max-width: 1000px) {
   .container {
     grid-template: 1fr 1fr 1fr 1fr / 1fr;
@@ -151,7 +151,8 @@ li:active{
   }
   li {
     display: block;
-    padding-left: 0px;
+    width: 100%;
+    padding-left: 50px;
   }
   .list {
     background: black;
@@ -163,6 +164,12 @@ li:active{
     z-index: 5;
     transition: 1s;
     overflow: hidden;
+    padding-left: 0;
+  }
+  ol {
+    margin-left: 0;
+    margin-top: 30%;
+    padding-left: 0;
   }
   .title {
     margin-top: 50px;
@@ -172,5 +179,8 @@ li:active{
   }
   body {
     font-size: 10px;
+  }
+  .pcont {
+    font-size 10px;
   }
 }
